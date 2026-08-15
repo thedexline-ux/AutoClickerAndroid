@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0B0D12" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AutoClicker Pro" android:textColor="#F6F7FB" android:textSize="30sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="● آماده" android:textColor="#8E98AB" android:textSize="14sp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="16dp" android:orientation="horizontal">
+            <TextView android:id="@+id/tabSetup" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/bg_tab" android:gravity="center" android:text="تنظیمات" android:textColor="#FFFFFF" android:textStyle="bold" android:clickable="true"/>
+            <TextView android:id="@+id/tabPoints" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="8dp" android:layout_weight="1" android:background="@drawable/bg_tab" android:gravity="center" android:text="نقاط" android:textColor="#AEB6C5" android:textStyle="bold" android:clickable="true"/>
+            <TextView android:id="@+id/tabProfiles" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="8dp" android:layout_weight="1" android:background="@drawable/bg_tab" android:gravity="center" android:text="پروفایل‌ها" android:textColor="#AEB6C5" android:textStyle="bold" android:clickable="true"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/setupPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="کنترل اجرای کلیک" android:textColor="#F6F7FB" android:textSize="20sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="فاصله کمتر یعنی کلیک سریع‌تر. مقدار 0 برای تعداد کلیک یعنی بدون محدودیت." android:textColor="#8E98AB" android:textSize="13sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="فاصله بین کلیک‌ها (ms)" android:textColor="#C7CEDA"/>
+                <EditText android:id="@+id/intervalInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="500" android:textColor="#FFFFFF" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="تعداد کلیک (0 = بی‌نهایت)" android:textColor="#C7CEDA"/>
+                <EditText android:id="@+id/countInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="0" android:textColor="#FFFFFF" android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <Button android:id="@+id/startButton" android:layout_width="0dp" android:layout_height="54dp" android:layout_weight="1" android:background="@drawable/bg_primary" android:text="▶ شروع" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/stopButton" android:layout_width="0dp" android:layout_height="54dp" android:layout_marginStart="10dp" android:layout_weight="1" android:background="@drawable/bg_secondary" android:text="■ توقف" android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/accessibilityButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_secondary" android:text="♿ دسترسی Accessibility" android:textColor="#FFFFFF"/>
+            <Button android:id="@+id/floatingButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="10dp" android:background="@drawable/bg_secondary" android:text="☷ فعال‌سازی کنترل شناور" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/pointsPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="انتخاب نقطه یا ناحیه" android:textColor="#F6F7FB" android:textSize="20sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="به‌جای وارد کردن مختصات، دکمه انتخاب را بزن و روی صفحه نقطه موردنظر را لمس کن. در حالت ناحیه، یک محدوده مستطیلی انتخاب می‌کنی." android:textColor="#8E98AB" android:textSize="13sp"/>
+            <Button android:id="@+id/pickPointButton" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:background="@drawable/bg_primary" android:text="＋ انتخاب نقطه از صفحه" android:textColor="#FFFFFF"/>
+            <Button android:id="@+id/pickRegionButton" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:background="@drawable/bg_secondary" android:text="▣ انتخاب ناحیه از صفحه" android:textColor="#FFFFFF"/>
+            <TextView android:id="@+id/pointSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_card" android:padding="16dp" android:text="هنوز نقطه‌ای انتخاب نشده" android:textColor="#C7CEDA" android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/profilesPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="پروفایل‌های آماده" android:textColor="#F6F7FB" android:textSize="20sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="برای بازی یا کارهای مختلف، تنظیمات جداگانه ذخیره کن و سریع بین آن‌ها جابه‌جا شو." android:textColor="#8E98AB" android:textSize="13sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:orientation="vertical" android:background="@drawable/bg_card">
+                <Button android:id="@+id/profile1" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_secondary" android:text="پروفایل ۱" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/profile2" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:background="@drawable/bg_secondary" android:text="پروفایل ۲" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/profile3" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:background="@drawable/bg_secondary" android:text="پروفایل ۳" android:textColor="#FFFFFF"/>
+                <Button android:id="@+id/profile4" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:background="@drawable/bg_secondary" android:text="پروفایل ۴" android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginBottom="22dp" android:text="راهنما: ابتدا Accessibility را فعال کن. سپس از تب «نقاط» نقطه/ناحیه را انتخاب کن و از «تنظیمات» سرعت و تعداد را مشخص کن. بعد می‌توانی از کنترل شناور برای توقف یا تغییر سرعت خارج از برنامه استفاده کنی." android:textColor="#737E90" android:textSize="13sp"/>
+    </LinearLayout>
+</ScrollView>
