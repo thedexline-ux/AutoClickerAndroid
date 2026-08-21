@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اتو کلیکر"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="وضعیت: متوقف"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/accessibilityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="فعال کردن دسترسی اتوکلیکر" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="پروفایل / تب"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/profile1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="1" />
+            <Button android:id="@+id/profile2" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="2" />
+            <Button android:id="@+id/profile3" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="3" />
+            <Button android:id="@+id/profile4" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="4" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/xInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="مختصات X"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/yInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="مختصات Y"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/intervalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="فاصله بین کلیک‌ها (میلی‌ثانیه)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/clickCountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="تعداد کلیک (0 = بی‌نهایت)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ذخیره پروفایل" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="شروع" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="توقف" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="نکته: هر پروفایل تنظیمات خودش را دارد. سرویس فقط روی صفحه‌ای که در همان لحظه فعال است کلیک می‌کند."
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
